@@ -73,4 +73,8 @@ h1 {
   background-color: white;
   cursor: pointer;
 }
+.pressed{
+  box-shadow: 0 3px 4px 0 #DBEDF03;
+  opacity:0.5;
+}
 
