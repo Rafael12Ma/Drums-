@@ -48,7 +48,7 @@ document.addEventListener("keydown",function(event){
   buttonAnimation(event.key);
 })
 function buttonAnimation(currentkey){
-var activeButton document.querySelector("."+currentkey);
+var activeButton= document.querySelector("."+currentkey);
   activeButton.classList.add("pressed");
 
 setTimeout(function(){
