@@ -6,6 +6,13 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
   });
 }
 
+document.addEventListener("keydown",function(event){
+  makesound(event.key);
+  buttonAnimation(event.key);
+})
+
+
+
 function makesound(key) {
   switch (key) {
     case "w":
@@ -43,14 +50,17 @@ function makesound(key) {
 }
 
 
-document.addEventListener("keydown",function(event){
-  makesound(event.key);
-  buttonAnimation(event.key);
-})
+
+
 function buttonAnimation(currentkey){
-var activeButton= document.querySelector("."+currentkey);
-  activeButton.classList.add("pressed");
+
+var activeButton = document.querySelector("."+currentkey);
+
+activeButton.classList.add("pressed");
 
 setTimeout(function(){
-  activeButton.classList.remove("pressed");},100);
+  activeButton.classList.remove("pressed");
+},100);
+
+
 }
